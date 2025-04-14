@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hello/screens/home_screen.dart'; // ← 프로젝트 이름 기준 import
+
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: const MyHomePage(),
+      home: const HomeScreen(),  // ← 이걸로 변경
       debugShowCheckedModeBanner: false,
     );
   }
