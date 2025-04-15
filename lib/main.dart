@@ -1,57 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:hello/screens/home_screen.dart'; // ← 프로젝트 이름 기준 import
+import 'chatScreen.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized(); // 있어도 되고 없어도 됨
+  await dotenv.load(); // .env 불러오기
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
-      title: '나의 첫 Flutter 앱',
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-      ),
-      home: const HomeScreen(),  // ← 이걸로 변경
+      title: 'Gemini 챗봇',
+      theme: ThemeData(primarySwatch: Colors.teal),
+      home: const ChatScreen(),
       debugShowCheckedModeBanner: false,
-    );
-  }
-}
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('✨ 안녕! Flutter 세계 ✨'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              '방가방가 🎉',
-              style: TextStyle(fontSize: 24),
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                final snackBar = SnackBar(
-                  content: Text('버튼 눌렀다! 🚀'),
-                );
-                ScaffoldMessenger.of(context).showSnackBar(snackBar);
-              },
-              child: const Text('눌러봐!'),
-            ),
-          ],
-        ),
-      ),
+
+
+
     );
   }
 }
