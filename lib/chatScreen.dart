@@ -30,8 +30,9 @@ class _ChatScreenState extends State<ChatScreen> {
     });
 
     final url = Uri.parse(
-        'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=...'
+        'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=$_apiKey'
     );
+
 
     final response = await http.post(
       url,
