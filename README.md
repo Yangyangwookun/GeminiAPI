@@ -1,6 +1,6 @@
 # hello
 
-A new Flutter project.
+Flutter + Google Gemini API 프로젝트
 
 ## Getting Started
 
