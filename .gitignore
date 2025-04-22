@@ -46,3 +46,6 @@ app.*.map.json
 
 
 .env
+bfg.jar
+*.key
+*.pem
