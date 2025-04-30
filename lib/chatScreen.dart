@@ -97,7 +97,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   controller: _controller,
                   decoration: const InputDecoration(
                     contentPadding: EdgeInsets.all(10),
-                    hintText: '메시지를 입력하세요',
+                    hintText: '메시지를 입력하세요', //테스트
                   ),
                 ),
               ),
